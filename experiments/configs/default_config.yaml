@@ -1,0 +1,70 @@
+# Default Configuration for Safe RL Soft Robot Training
+
+# Environment Settings
+environment:
+  name: "soft_robot_env"
+  robot_type: "tentacle"  # options: tentacle, gripper, locomotion
+  action_dim: 8
+  observation_dim: 24
+  max_episode_steps: 1000
+  control_frequency: 50  # Hz
+  
+# Robot Parameters
+robot:
+  segments: 4
+  segment_length: 0.1  # meters
+  radius: 0.02  # meters
+  mass_per_segment: 0.05  # kg
+  stiffness: 1000.0  # N/m
+  damping: 10.0  # Ns/m
+  max_force: 10.0  # N per actuator
+  
+# Safety Constraints
+safety:
+  max_deformation: 0.5  # maximum normalized deformation
+  collision_threshold: 0.01  # minimum distance to obstacles
+  force_limit: 15.0  # maximum total force
+  velocity_limit: 2.0  # maximum velocity
+  emergency_stop_threshold: 0.8  # fraction of constraint violation
+
+# RL Algorithm Settings
+algorithm:
+  name: "PPO"  # options: PPO, SAC, CPO
+  learning_rate: 3e-4
+  batch_size: 64
+  n_epochs: 10
+  clip_range: 0.2
+  entropy_coef: 0.01
+  value_loss_coef: 0.5
+  max_grad_norm: 0.5
+  
+# Safe RL Specific
+safe_rl:
+  constraint_threshold: 0.1
+  lagrange_multiplier_lr: 1e-3
+  cost_limit: 25.0
+  safety_budget: 0.05
+  
+# Training Settings
+training:
+  total_timesteps: 1000000
+  eval_freq: 10000
+  save_freq: 50000
+  n_eval_episodes: 10
+  log_interval: 1000
+  
+# Robustness Testing
+robustness:
+  domain_randomization: true
+  stiffness_range: [500.0, 1500.0]
+  mass_range: [0.03, 0.07]
+  friction_range: [0.1, 0.9]
+  noise_level: 0.05
+  
+# Experiment Tracking
+logging:
+  use_wandb: true
+  project_name: "safe-soft-robot-rl"
+  experiment_name: "default_run"
+  log_video: true
+  video_freq: 25000

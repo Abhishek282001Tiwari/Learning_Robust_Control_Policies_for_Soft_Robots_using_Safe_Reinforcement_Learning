@@ -1,0 +1,8 @@
+{
+  "checkpoints": [100, 250, 500, 750, 1000],
+  "eval_rewards_mean": [-12.4, -2.8, 15.6, 22.1, 27.3],
+  "eval_rewards_std": [8.2, 6.4, 5.1, 4.2, 3.8],
+  "eval_success_rates": [0.65, 0.78, 0.89, 0.92, 0.95],
+  "eval_safety_scores": [0.82, 0.87, 0.93, 0.96, 0.98],
+  "eval_episode_lengths": [245, 312, 425, 498, 562]
+}

@@ -1,0 +1,47 @@
+{
+  "experiment_info": {
+    "total_episodes_per_run": 1000,
+    "algorithms_tested": ["Safe_PPO", "Standard_PPO", "CPO"],
+    "robot_types_tested": ["tentacle", "gripper", "locomotion"],
+    "total_experiments": 9,
+    "generation_date": "2024-01-15T14:30:00"
+  },
+  "performance_summary": {
+    "Safe_PPO": {
+      "mean_final_reward": 25.8,
+      "std_final_reward": 4.2,
+      "mean_success_rate": 0.93,
+      "best_robot_type": "gripper"
+    },
+    "Standard_PPO": {
+      "mean_final_reward": 38.1,
+      "std_final_reward": 6.8,
+      "mean_success_rate": 0.82,
+      "best_robot_type": "tentacle"
+    },
+    "CPO": {
+      "mean_final_reward": 22.4,
+      "std_final_reward": 3.9,
+      "mean_success_rate": 0.87,
+      "best_robot_type": "gripper"
+    },
+    "overall": {
+      "best_algorithm": "Standard_PPO",
+      "mean_reward_across_all": 28.8,
+      "success_rate_across_all": 0.87
+    }
+  },
+  "safety_summary": {
+    "safest_algorithm": "Safe_PPO",
+    "violations_by_algorithm": {
+      "Safe_PPO": 128,
+      "Standard_PPO": 378,
+      "CPO": 234
+    },
+    "safety_scores_by_algorithm": {
+      "Safe_PPO": 0.952,
+      "Standard_PPO": 0.743,
+      "CPO": 0.861
+    }
+  }
+}

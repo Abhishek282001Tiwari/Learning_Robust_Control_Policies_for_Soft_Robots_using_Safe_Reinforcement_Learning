@@ -1,0 +1,77 @@
+# Site settings
+title: Safe RL for Soft Robots
+description: Learning Robust Control Policies for Soft Robots using Safe Reinforcement Learning
+url: "https://your-username.github.io"
+baseurl: "/Learning_Robust_Control_Policies_for_Soft_Robots_using_Safe_Reinforcement_Learning"
+
+# Author information
+author: Your Name
+email: your.email@example.com
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Navigation
+header_pages:
+  - about.md
+  - methodology.md
+  - results.md
+  - code.md
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:categories/:year/:month/:day/:title/
+
+# Default layouts
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Markdown settings
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Include custom CSS
+sass:
+  style: compressed
+
+# Google Analytics (optional)
+# google_analytics: UA-NNNNNNNN-N
+
+# Math support
+mathjax: true

@@ -1,0 +1,38 @@
+{
+  "algorithm": "Standard_PPO",
+  "robot_type": "tentacle",
+  "violation_counts": {
+    "collision": 25,
+    "velocity": 35,
+    "force": 18,
+    "deformation": 40,
+    "emergency_stop": 8
+  },
+  "total_violations": 126,
+  "violation_rate": 0.126,
+  "safety_score": 0.874,
+  "avg_severity": 0.52,
+  "violation_timeline": [
+    {"episode_range": "0-49", "violations": 18},
+    {"episode_range": "50-99", "violations": 16},
+    {"episode_range": "100-149", "violations": 15},
+    {"episode_range": "150-199", "violations": 14},
+    {"episode_range": "200-249", "violations": 13},
+    {"episode_range": "250-299", "violations": 14},
+    {"episode_range": "300-349", "violations": 15},
+    {"episode_range": "350-399", "violations": 14},
+    {"episode_range": "400-449", "violations": 13},
+    {"episode_range": "450-499", "violations": 14},
+    {"episode_range": "500-549", "violations": 15},
+    {"episode_range": "550-599", "violations": 14},
+    {"episode_range": "600-649", "violations": 13},
+    {"episode_range": "650-699", "violations": 14},
+    {"episode_range": "700-749", "violations": 15},
+    {"episode_range": "750-799", "violations": 14},
+    {"episode_range": "800-849", "violations": 13},
+    {"episode_range": "850-899", "violations": 14},
+    {"episode_range": "900-949", "violations": 15},
+    {"episode_range": "950-999", "violations": 14}
+  ],
+  "total_episodes": 1000
+}

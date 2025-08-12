@@ -1,0 +1,29 @@
+[
+  {
+    "algorithm": "Safe_PPO",
+    "training_time_hours": 3.1,
+    "memory_usage_gb": 2.9,
+    "inference_time_ms": 12.8,
+    "gpu_utilization_percent": 87.3,
+    "convergence_iterations": 562,
+    "parameters_count": 218543
+  },
+  {
+    "algorithm": "Standard_PPO",
+    "training_time_hours": 2.6,
+    "memory_usage_gb": 2.1,
+    "inference_time_ms": 8.2,
+    "gpu_utilization_percent": 82.1,
+    "convergence_iterations": 485,
+    "parameters_count": 195287
+  },
+  {
+    "algorithm": "CPO",
+    "training_time_hours": 4.3,
+    "memory_usage_gb": 3.6,
+    "inference_time_ms": 15.7,
+    "gpu_utilization_percent": 91.2,
+    "convergence_iterations": 724,
+    "parameters_count": 241896
+  }
+]
